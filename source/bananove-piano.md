@@ -21,3 +21,6 @@ while True:
             i = 0
 ```
 Toto naše piano vieme rozšíriť ešte aj o svetlo - pri každom stlačení klávesu náhodne zmeníme všetky farby na LED pásiku.
+
+
+__Pozri Mu editor cez pip vs cez Exe na touch sensor__
