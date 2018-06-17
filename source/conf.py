@@ -244,3 +244,6 @@ texinfo_documents = [
 
 
 
+def setup(app): 
+    app.add_javascript('embed/embed.js') 
+    app.add_javascript('embed/jquery-2.1.1.min.js') 
