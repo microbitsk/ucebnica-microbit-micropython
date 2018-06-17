@@ -15,6 +15,8 @@ Microbit dokáže generovať aj zvuk, a to konkrétne na kolíku 0. Preto k nemu
 ## Radio
 Micro:bit obsahuje aj vbudovaný komunikačný modul, a teda vedia medzi sebou navzájom komunikovať.
 
+Pre používanie rádia je potrebné definovať skupinu (anglicky ``Group``) - [viac podrobností tu](https://support.microbit.org/support/solutions/articles/19000030849-how-to-use-radio-group-codes-with-the-javascript-blocks-editor)
+
 ## Cykly, Logiku, Premenné, Matematika
 Tak ako v Scratch, aj Blockly obsahuje základné príkazy a konštrukcie. Zaujímavým môže byť _vybrať náhodne od 0 po n_, ktorý generuje náhodné čísla.
 
