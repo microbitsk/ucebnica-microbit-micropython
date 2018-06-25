@@ -1,5 +1,10 @@
 # Inšpirácie a odkazy
 
+## Pre Školy
+
+* [Micro:bit Makecode offline version - forum](https://github.com/KittenBot/pxt-robotbit)
+* [Micro:bit Makecode offline version - github](http://kittenbot.cc/bbs/topic/3/microbit-makecode-offline-version)
+
 ## micro:bit pinball game
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QzWSRXqQBeQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
