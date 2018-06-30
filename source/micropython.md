@@ -29,3 +29,5 @@ Ako ale zistíme, aké možné obrázky môžeme vykresliť? Na to nám slúži 
 [Mu (čoskoro v SK)](https://codewith.mu/) je IDE pre písanie MicroPython kódu pre micro:bit, ako aj pre Python3 (skvelá alternatíva k IDLE). Je možné ho stiahnuť a spustiť bez inštalácie, alebo inštalovať pomocou nástroja ``pip``. Pre plnú funkcionalitu je potrebné pri platforme Windows stiahnúť si driver pre micro:bit.
 
 ![Mu editor](/_static/images/mu-code-repl.png)
+
+[Mu - blog o projektoch vytvorených v Mu](https://madewith.mu/)
