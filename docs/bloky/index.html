@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>2. Blokové programovanie &#8212; Dokumentácia Programujeme micro:bit v MicroPythone </title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/embed/embed.js"></script>
+    <script type="text/javascript" src="../_static/embed/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Hľadať" href="../search/" />
+    <link rel="next" title="3. MicroPython prostredia" href="../micropython/" />
+    <link rel="prev" title="1. Úvod" href="../uvod/" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../">
+          Programujeme micro:bit v MicroPythone</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Vyber kapitolu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../uvod/">1. Úvod</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Blokové programovanie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../micropython/">3. MicroPython prostredia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../displej/">4. Displej</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tlacidla/">5. Tlačidlá</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../naklonenie/">6. Naklonenie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zvuk/">7. Zvuk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../neopixel/">8. NeoPixel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../digitalny-vstup/">9. Digitálny vstup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bananove-piano/">10. Banánové piano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hra_reflexy/">11. Hra na reflexy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wireless/">12. Bezdrôtová komunikácia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../alarm/">13. Domáci alarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../move_mini_robot/">14. MOVE: mini robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projekty/">15. Zbierka Projektov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inspiracia/">16. Inšpirácie a odkazy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kupit/">17. Kde kúpiť micro:bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../riesenia/">18. Riešenia a odpovede</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../uvod/" title="Previous Chapter: 1. Úvod"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 1. Úvod</span>
+    </a>
+  </li>
+  <li>
+    <a href="../micropython/" title="Next Chapter: 3. MicroPython prostredia"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">3. MicroPytho... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="topless">
+        <h4>      
+                <a href="../uvod/" title="predošlá kapitola">&nbsp;&nbsp;&nbsp;&#8676; Dozadu</a>
+                |
+                 <a href="../micropython/" title="ďalšia kapitola">Dopredu&nbsp;&nbsp;&nbsp;&#8677;</a>
+    
+        </h4>
+    </p>
+    
+    <h4>Obsah Kapitoly:</h4>
+    
+    <ul>
+<li><a class="reference internal" href="#">2. Blokové programovanie</a><ul>
+<li><a class="reference internal" href="#zakladne">2.1. Základné</a></li>
+<li><a class="reference internal" href="#vstup">2.2. Vstup</a></li>
+<li><a class="reference internal" href="#hudba">2.3. Hudba</a></li>
+<li><a class="reference internal" href="#radio">2.4. Radio</a></li>
+<li><a class="reference internal" href="#cykly-logiku-premenne-matematika">2.5. Cykly, Logiku, Premenné, Matematika</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+<p class="topless">
+  <h5>
+    <a href="https://docs.microbit.sk" target="_blank">MicroPython Dokumentácia</a>
+  </h5>
+  <h5>
+    <a href="https://pycon.sk" target="_blank">Python Konferencia PyCon</a>
+  </h5>
+  <h5>
+    <a href="https://spy.python.sk" target="_blank">SPy o.z.</a>
+  </h5>
+  <h5>
+    <a href="https://marekmansell.sk" target="_blank">O autorovi</a>
+  </h5>
+</p>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="blokove-programovanie">
+<h1>2. Blokové programovanie<a class="headerlink" href="#blokove-programovanie" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p><a class="reference external" href="https://makecode.microbit.org/?lang=sk_SK">Online Blockly Editor</a> je online editor pre programovanie micro:bitu cez grafický programovací jazyk. Pri tomto spôsobe programovania nie je potrebná inštalácia softvéru na počítač či administrátorské práva, stačí prístup na internet a internetový prehliadač.</p>
+<pre><code class="blocks">basic.showString(&quot;Hello world&quot;)
+</code></pre><pre><code class="blocks">basic.forever(() =&gt; {
+    basic.showLeds(`
+        . # . # .
+        # . # . #
+        # . . . #
+        . # . # .
+        # . # . .
+        `)
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        # # # # #
+        . # # # .
+        . . # . .
+        `)
+})
+</code></pre><div class="section" id="zakladne">
+<h2>2.1. Základné<a class="headerlink" href="#zakladne" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Zobraziť reťazec - vypíše text na obrazovke</p>
+<p>Zobraziť LED - zobrazí obrázok na obrazovke</p>
+</div>
+<div class="section" id="vstup">
+<h2>2.2. Vstup<a class="headerlink" href="#vstup" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>V tejto časti sa nachádzajú bloky, ktoré spustia kód pri nejakej udalosti - napríklad pri stlačení tlačidla, naklonení dosky alebo zatrasení.</p>
+</div>
+<div class="section" id="hudba">
+<h2>2.3. Hudba<a class="headerlink" href="#hudba" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Microbit dokáže generovať aj zvuk, a to konkrétne na kolíku 0. Preto k nemu pripojíme jeden káblik mikrofónu (dátový) a druhý (zem) pripojíme k <code class="docutils literal notranslate"><span class="pre">GND</span></code>. Skúste si spustiť melódiu <code class="docutils literal notranslate"><span class="pre">svadba</span></code>.</p>
+</div>
+<div class="section" id="radio">
+<h2>2.4. Radio<a class="headerlink" href="#radio" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Micro:bit obsahuje aj vbudovaný komunikačný modul, a teda vedia medzi sebou navzájom komunikovať.</p>
+<p>Pre používanie rádia je potrebné definovať skupinu (anglicky <code class="docutils literal notranslate"><span class="pre">Group</span></code>) - <a class="reference external" href="https://support.microbit.org/support/solutions/articles/19000030849-how-to-use-radio-group-codes-with-the-javascript-blocks-editor">viac podrobností tu</a></p>
+</div>
+<div class="section" id="cykly-logiku-premenne-matematika">
+<h2>2.5. Cykly, Logiku, Premenné, Matematika<a class="headerlink" href="#cykly-logiku-premenne-matematika" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Tak ako v Scratch, aj Blockly obsahuje základné príkazy a konštrukcie. Zaujímavým môže byť <em>vybrať náhodne od 0 po n</em>, ktorý generuje náhodné čísla.</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+  </body>
+</html>

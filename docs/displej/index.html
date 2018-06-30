@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>4. Displej &#8212; Dokumentácia Programujeme micro:bit v MicroPythone </title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/embed/embed.js"></script>
+    <script type="text/javascript" src="../_static/embed/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Hľadať" href="../search/" />
+    <link rel="next" title="5. Tlačidlá" href="../tlacidla/" />
+    <link rel="prev" title="3. MicroPython prostredia" href="../micropython/" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../">
+          Programujeme micro:bit v MicroPythone</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Vyber kapitolu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../uvod/">1. Úvod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bloky/">2. Blokové programovanie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../micropython/">3. MicroPython prostredia</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Displej</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tlacidla/">5. Tlačidlá</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../naklonenie/">6. Naklonenie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zvuk/">7. Zvuk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../neopixel/">8. NeoPixel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../digitalny-vstup/">9. Digitálny vstup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bananove-piano/">10. Banánové piano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hra_reflexy/">11. Hra na reflexy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wireless/">12. Bezdrôtová komunikácia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../alarm/">13. Domáci alarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../move_mini_robot/">14. MOVE: mini robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projekty/">15. Zbierka Projektov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inspiracia/">16. Inšpirácie a odkazy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kupit/">17. Kde kúpiť micro:bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../riesenia/">18. Riešenia a odpovede</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../micropython/" title="Previous Chapter: 3. MicroPython prostredia"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 3. MicroPytho...</span>
+    </a>
+  </li>
+  <li>
+    <a href="../tlacidla/" title="Next Chapter: 5. Tlačidlá"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">5. Tlačidlá &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="topless">
+        <h4>      
+                <a href="../micropython/" title="predošlá kapitola">&nbsp;&nbsp;&nbsp;&#8676; Dozadu</a>
+                |
+                 <a href="../tlacidla/" title="ďalšia kapitola">Dopredu&nbsp;&nbsp;&nbsp;&#8677;</a>
+    
+        </h4>
+    </p>
+    
+    <h4>Obsah Kapitoly:</h4>
+    
+    <ul>
+<li><a class="reference internal" href="#">4. Displej</a><ul>
+<li><a class="reference internal" href="#zobrazenie-textu-ahoj-svet">4.1. Zobrazenie textu „Ahoj, Svet!“</a></li>
+<li><a class="reference internal" href="#trvale-zobrazovanie-textu">4.2. Trvalé zobrazovanie textu</a></li>
+<li><a class="reference internal" href="#pauza-medzi-vypisovanim-textu">4.3. Pauza medzi vypisovaním textu</a></li>
+<li><a class="reference internal" href="#zobrazovanie-obrazkov">4.4. Zobrazovanie obrázkov</a></li>
+<li><a class="reference internal" href="#vlastny-obrazok">4.5. Vlastný obrázok</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+<p class="topless">
+  <h5>
+    <a href="https://docs.microbit.sk" target="_blank">MicroPython Dokumentácia</a>
+  </h5>
+  <h5>
+    <a href="https://pycon.sk" target="_blank">Python Konferencia PyCon</a>
+  </h5>
+  <h5>
+    <a href="https://spy.python.sk" target="_blank">SPy o.z.</a>
+  </h5>
+  <h5>
+    <a href="https://marekmansell.sk" target="_blank">O autorovi</a>
+  </h5>
+</p>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="displej">
+<h1>4. Displej<a class="headerlink" href="#displej" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Ako si si mohol/mohla všimnúť, micro:bit má na svojej prednej strane 5x5 červených LED diód. MicroPython Ti dáva viacero možností, akými na displeji niečo vykreslovať či vypisovať.</p>
+<div class="section" id="zobrazenie-textu-ahoj-svet">
+<h2>4.1. Zobrazenie textu „Ahoj, Svet!“<a class="headerlink" href="#zobrazenie-textu-ahoj-svet" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Najbežnejším prvým programom pri učení sa nového programovacieho jazyka býva vypísanie textu „Ahoj, Svet!“.</p>
+<div class="figure align-center" id="id1">
+<img alt="micro:bit s programom &quot;Ahoj, Svet!&quot;" src="https://docs.microbit.sk/_images/scroll-hello1.gif" />
+<p class="caption"><span class="caption-text">Vypisovanie textu „Ahoj, Svet!“</span></p>
+</div>
+<p>V MicroPythone vieme napísať tento program v dvoch riadkoch kódu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj, Svet!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Každý riadok vykaná niečo iné. Prvý riadok:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>povie micro:bitu, aby pre nás pripravil všetku funkcionalitu z modulu <code class="docutils literal notranslate"><span class="pre">microbit</span></code>. Tento modul obsahuje predprogramované funkcie, ktoré ovládajú napríklad zobrazovanie textu na obrazovke. Takéto ‚zavolanie‘ voláme <code class="docutils literal notranslate"><span class="pre">import</span></code>. A keď z modulu importujeme hviezdičku (*), tak to znamená, že importujeme všetko z daného modulu. Moduly sa taktiež nazývajú aj knižnicami (no namiesto kníh majú v sebe kód).</p>
+<p>Druhý riadok:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj, Svet!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>povie micro:bitu, aby na displej postupne vypísal reťazec znakov „Ahoj, Svet!“. Slovo <code class="docutils literal notranslate"><span class="pre">display</span></code> je objekt z modulu <code class="docutils literal notranslate"><span class="pre">microbit</span></code>, ktorý predstavuje fyzický displej zariadenia (hovoríme „objekt“ namiesto „hento“, „oné“ alebo „tá vec“). Za objekt sme napísali bodku, za ktorou nasleduje príkaz (po správnosti nazývaný <cite>metóda</cite>). V tomto prípade používame metódu <code class="docutils literal notranslate"><span class="pre">scroll</span></code>, čo po slovensky znamená posúvať. Aby ale micro:bit vedel, aký text má na obrazovke zobraziť, musíme ho označiť pomocou dvojitých úvodzoviek <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> (na začiatku a aj na konci) a poslať do príkazu scroll. To spravíme vložením textu do  zátvoriek za metódou <code class="docutils literal notranslate"><span class="pre">scroll()</span></code>. Obsah zátvoriek nazývame argument. Takže display.scroll(„Ahoj, svet!“) znamená po slovensky „Chcem, aby si použil displej a posúval na ňom text ‚Ahoj, svet!‘“. Ak metóda nepotrebuje argumenty, musíme to dať jasne najavo použitím prádznych zátvoriek - takto: <code class="docutils literal notranslate"><span class="pre">scroll()</span></code>.</p>
+<p>Teraz svoj kód ešte skontroluj - či už opticky, alebo v <cite>Mu editore</cite> pomocou tlačidla <cite>check</cite> (veľký palec). Ak si v programe nenašiel žiadne chyby, nahraj ho na micro:bit (v Mu editore pomocou tlačidla <cite>Flash</cite>).</p>
+<p>Ak by si chcel zistiť, aké iné argumenty môžeš pre príkaz <code class="docutils literal notranslate"><span class="pre">scroll()</span></code> použiť, pozri si <a class="reference external" href="https://microbit-micropython.readthedocs.io/en/latest/display.html?highlight=scroll#microbit.display.scroll">dokumentáciu</a>.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Varovanie</p>
+<p class="last">Je možné, že Ti program nebude fungovať hneď na prvý krát.</p>
+</div>
+<div class="admonition-uloha-c-1 admonition">
+<p class="first admonition-title">Úloha č. 1</p>
+<p class="last">Pozmeň program tak, aby zdravil Teba (krstným menom) a nie celý Svet.</p>
+</div>
+<div class="admonition-uloha-c-2 admonition">
+<p class="first admonition-title">Úloha č. 2</p>
+<p class="last">Doplň program tak, aby najprv pozdravil Svet a potom Teba. Výsledný program by mal mať 3 riadky kódu (vrátane riadka, kde importujeme).</p>
+</div>
+<div class="admonition-kontrolne-otazky admonition">
+<p class="first admonition-title">Kontrolné otázky</p>
+<ul class="last simple">
+<li>Čo je to argument metódy?</li>
+<li>Ak do metódy neposielam žiadne argumenty, musím písať zátvorky?</li>
+<li>Čo znamená hviezdička (<code class="docutils literal notranslate"><span class="pre">*</span></code>) pri importe?</li>
+</ul>
+</div>
+</div>
+<div class="section" id="trvale-zobrazovanie-textu">
+<h2>4.2. Trvalé zobrazovanie textu<a class="headerlink" href="#trvale-zobrazovanie-textu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Podarilo sa nám text vypísať na obrazovku, avšak zatiaľ sa vždy vypíše iba jeden krát. No čo ak si chceme spraviť menovku, ktorá by stále ukazovala Tvoje krstné meno? Potrebujeme nejakým spôsobom docieliť, aby sa náš riadok kódu s príkazom <code class="docutils literal notranslate"><span class="pre">display.scroll()</span></code> donekonečna spúšťal. Môžme skúsiť daný riadok skopírovať čo najviac krát:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Volam sa Marek&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Volam sa Marek&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Volam sa Marek&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Volam sa Marek&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Volam sa Marek&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>ale aj tak sa raz vykonávanie programu skončí. Potrebujeme preto nekonečný cyklus:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Volam sa Marek&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Príkaz <code class="docutils literal notranslate"><span class="pre">while</span></code> sa vždy pozerá na to, čo sme napísali za neho. Pokým je za ním pravdivá hodnota tak bude vykonávať všetky príkazy prislúchajúce do daného cyklu. A keďže <code class="docutils literal notranslate"><span class="pre">True</span></code> (anglicky <cite>pravda</cite>) je vždy pravdivé, tak micro:bit bude kód opakovať donekonečna. To, či nejaký kód patrí do cyklu zistíš tak, že ďaľšie riadky sú posunuté do prava o 4 medzerníky (jeden tabulátor - kláves nad CapsLock-om). Toto posunutie sa po slovensky volá <cite>odsadenie</cite> a po anglicky <cite>indentation</cite> čiže <cite>indentácia</cite>.</p>
+<p>Všimni si, že na konci riadku s príkazom <code class="docutils literal notranslate"><span class="pre">while</span></code> sa nachádza dvojbodka. Tá sa vždy používa v kombinácií s príkazmi, po ktorých aspoň jeden ďaľší príkaz odsadíš a bude sa vykonávať na základe toho, aká je podmienka v riadku s dvojbodkou.</p>
+<p>Pozrime sa teraz na tento kód:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj Bratislava&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj Bystrica&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj Nitra&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Z kódu vieme vyčítať, že donekonečna budeme vypisovať „Ahoj Bratislava“ a „Ahoj Bystrica“. Príkaz s textom „Ahoj Nitra“ nie je odsadený, a tak nie je súčasťou while cyklu. Preto by sa vykonal až keď while cyklus skončí. Ten ale nikdy neskončí, keďže <code class="docutils literal notranslate"><span class="pre">True</span></code> má vždy pravdivú hodnotu, a tak sa tento riadok kódu nikdy nespustí.</p>
+<p>Kým v predchádzajúcej ukážke sa posledný riadok kódu nikdy nespustí, aspoň sa nám zobrazovali príkazy „Ahoj Bratislava“ a „Ahoj Bystrica“. Čo ak by sme ale doplnili takýto riadok:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj Bratislava&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj Bystrica&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj Nitra&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj Sabinov&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>V tomto prípade by nám program vôbec nespustil a vypísal by chybu, pretože posledný riadok je odsadený aj keď by nemal byť.</p>
+<div class="admonition-uloha-c-1 admonition">
+<p class="first admonition-title">Úloha č. 1</p>
+<p class="last">Doplň do programu ďaľší nekonečný cyklus, avšak ešte pred tým pozmeň ten prvý tak, aby sa ten prvý nikdy nespustil.
+Pomôcka: opak k <code class="docutils literal notranslate"><span class="pre">True</span></code> je <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</div>
+<div class="admonition-uloha-c-2 admonition">
+<p class="first admonition-title">Úloha č. 2</p>
+<p class="last">Skús spustiť posledný kód (s nesprávnym odsadzovaním) a zistiť, aký chybu vypíše micro:bit na displej.</p>
+</div>
+<div class="admonition-kontrolne-otazky admonition">
+<p class="first admonition-title">Kontrolné otázky</p>
+<ul class="last simple">
+<li>O koľko medzerníkov sa odsadzuje príkaz patriaci do cyklu?</li>
+<li>Na čo v nekonečnom cykle využívame príkaz <code class="docutils literal notranslate"><span class="pre">True</span></code>?</li>
+<li>Koľko najviac príkazov za sebou môže byť v jednom nekonečnom cykle?</li>
+</ul>
+</div>
+</div>
+<div class="section" id="pauza-medzi-vypisovanim-textu">
+<h2>4.3. Pauza medzi vypisovaním textu<a class="headerlink" href="#pauza-medzi-vypisovanim-textu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Čo ak by sme chceli medzi dva výpisy textu na obrazovku pridať nejakú pauzu, napríklad 5 sekúnd? Využijeme príkaz, ktorý micro:bitu povie, aby chvíľu počkal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj&quot;</span><span class="p">)</span>
+<span class="n">sleep</span><span class="p">(</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ako sa mas?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Príkaz <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> sme vložili medzi dva výpisy textu, a tak sa najprv zobrazí text „Ahoj“, chvíľu počká a potom vypíše text „Ako sa mas?“. To, ako dlho má čakať povieme micro:bitu pomocou argumentu, ktorý napíšeme do zátvoriek za metódou <code class="docutils literal notranslate"><span class="pre">sleep</span></code>. Tento krát vkladáme číslo a nie reťazec, preto nepoužívame úvodzovky <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>. Napíšeme tam, koľko milisekúnd má micro:bit čakať. Jedna milisekunda je tisícina sekundy, 1000 milisekúnd je 1 sekunda a 5000 milisekúnd je 5 sekúnd, čiže náš kód počká 5 sekúnd.</p>
+<div class="admonition-uloha-c-1 admonition">
+<p class="first admonition-title">Úloha č. 1</p>
+<p class="last">Využi príkaz <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> v nekonečnom cykle.</p>
+</div>
+<div class="admonition-uloha-c-2 admonition">
+<p class="first admonition-title">Úloha č. 2</p>
+<p>Uprav nasledujúci kód tak, aby micro:bit vypísal „Ahoj Martin“, počkal 3 sekundy, vypísal „Ahoj Kosice“ a zas počkal 3 sekundy:</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj Martin&quot;</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">scroll</span><span class="p">(</span><span class="s2">&quot;Ahoj Kosice&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-kontrolne-otazky admonition">
+<p class="first admonition-title">Kontrolné otázky</p>
+<ul class="last simple">
+<li>Čo sa stane, ako použijeme viac príkazov <code class="docutils literal notranslate"><span class="pre">sleep()</span></code> za sebou?</li>
+<li>Akú chybu vypíše micro:bit ak by sme namiesto čísla poslali to metódy <code class="docutils literal notranslate"><span class="pre">sleep</span></code> reťazec označený úvodzovkami (napríklad <code class="docutils literal notranslate"><span class="pre">sleep(&quot;5000&quot;)</span></code>)?</li>
+</ul>
+</div>
+</div>
+<div class="section" id="zobrazovanie-obrazkov">
+<h2>4.4. Zobrazovanie obrázkov<a class="headerlink" href="#zobrazovanie-obrazkov" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">SAD</span><span class="p">)</span>
+<span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://microbit-micropython.readthedocs.io/en/latest/tutorials/images.html">Zoznam všetkých obrázkov</a> je v dokumentácii</p>
+</div>
+<div class="section" id="vlastny-obrazok">
+<h2>4.5. Vlastný obrázok<a class="headerlink" href="#vlastny-obrazok" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="n">boat</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;05050:&quot;</span>
+             <span class="s2">&quot;05050:&quot;</span>
+             <span class="s2">&quot;05050:&quot;</span>
+             <span class="s2">&quot;99999:&quot;</span>
+             <span class="s2">&quot;09990&quot;</span><span class="p">)</span>
+
+<span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">boat</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Tento kód je možné skrátiť aj na:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span>
+<span class="kn">from</span> <span class="nn">microbit</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="n">boat</span> <span class="o">=</span> <span class="n">Image</span><span class="p">(</span><span class="s2">&quot;05050:05050:05050:99999:09990&quot;</span><span class="p">)</span>
+
+<span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">boat</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://microbit-micropython.readthedocs.io/en/latest/tutorials/images.html#diy-images">Návod na tvorbu vlastných obrázkov</a> je v dokumentácii</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+  </body>
+</html>

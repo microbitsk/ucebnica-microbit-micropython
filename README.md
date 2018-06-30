@@ -28,4 +28,9 @@ html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 ```
 
+## Before Push Update /docs file!!!
+
+```
+sphinx-build -b dirhtml source docs
+```
 

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>7. Zvuk &#8212; Dokumentácia Programujeme micro:bit v MicroPythone </title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/embed/embed.js"></script>
+    <script type="text/javascript" src="../_static/embed/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Hľadať" href="../search/" />
+    <link rel="next" title="8. NeoPixel" href="../neopixel/" />
+    <link rel="prev" title="6. Naklonenie" href="../naklonenie/" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../">
+          Programujeme micro:bit v MicroPythone</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Vyber kapitolu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../uvod/">1. Úvod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bloky/">2. Blokové programovanie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../micropython/">3. MicroPython prostredia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../displej/">4. Displej</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tlacidla/">5. Tlačidlá</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../naklonenie/">6. Naklonenie</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Zvuk</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../neopixel/">8. NeoPixel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../digitalny-vstup/">9. Digitálny vstup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bananove-piano/">10. Banánové piano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hra_reflexy/">11. Hra na reflexy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wireless/">12. Bezdrôtová komunikácia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../alarm/">13. Domáci alarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../move_mini_robot/">14. MOVE: mini robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projekty/">15. Zbierka Projektov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inspiracia/">16. Inšpirácie a odkazy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kupit/">17. Kde kúpiť micro:bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../riesenia/">18. Riešenia a odpovede</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../naklonenie/" title="Previous Chapter: 6. Naklonenie"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 6. Naklonenie</span>
+    </a>
+  </li>
+  <li>
+    <a href="../neopixel/" title="Next Chapter: 8. NeoPixel"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">8. NeoPixel &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="topless">
+        <h4>      
+                <a href="../naklonenie/" title="predošlá kapitola">&nbsp;&nbsp;&nbsp;&#8676; Dozadu</a>
+                |
+                 <a href="../neopixel/" title="ďalšia kapitola">Dopredu&nbsp;&nbsp;&nbsp;&#8677;</a>
+    
+        </h4>
+    </p>
+    
+    <h4>Obsah Kapitoly:</h4>
+    
+    <ul>
+<li><a class="reference internal" href="#">7. Zvuk</a><ul>
+<li><a class="reference internal" href="#predprogramovana-hudba">7.1. Predprogramovaná hudba</a></li>
+<li><a class="reference internal" href="#pisanie-vlastnej-hudby">7.2. Písanie vlastnej hudby</a></li>
+<li><a class="reference internal" href="#rolnicky-na-micro-bite">7.3. Rolničky na micro:bite</a></li>
+<li><a class="reference internal" href="#zvukove-efekty">7.4. Zvukové efekty</a></li>
+<li><a class="reference internal" href="#tvorba-melodie">7.5. Tvorba melódie</a></li>
+<li><a class="reference internal" href="#tvorba-melodie-cez-cykly">7.6. Tvorba melódie cez cykly</a></li>
+<li><a class="reference internal" href="#obratena-melodia">7.7. Obrátená melódia</a></li>
+<li><a class="reference internal" href="#jemnejsia-melodia">7.8. Jemnejšia melódia</a></li>
+<li><a class="reference internal" href="#rozpravajuci-micro-bit">7.9. Rozprávajúci micro:bit</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+<p class="topless">
+  <h5>
+    <a href="https://docs.microbit.sk" target="_blank">MicroPython Dokumentácia</a>
+  </h5>
+  <h5>
+    <a href="https://pycon.sk" target="_blank">Python Konferencia PyCon</a>
+  </h5>
+  <h5>
+    <a href="https://spy.python.sk" target="_blank">SPy o.z.</a>
+  </h5>
+  <h5>
+    <a href="https://marekmansell.sk" target="_blank">O autorovi</a>
+  </h5>
+</p>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="zvuk">
+<span id="zvuk"></span><h1>7. Zvuk<a class="headerlink" href="#zvuk" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p><img alt="Pripojenie reproduktora" src="../_images/speaker-setup.png" /></p>
+<div class="section" id="predprogramovana-hudba">
+<span id="predprogramovana-hudba"></span><h2>7.1. Predprogramovaná hudba<a class="headerlink" href="#predprogramovana-hudba" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">music</span>
+
+<span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">music</span><span class="o">.</span><span class="n">NYAN</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><strong>music</strong> - kinižnica na generovanie hudby na <em>pine 0</em></li>
+<li><strong>music.NYAN</strong> - prehrá melódiu <em>NYAN</em></li>
+</ul>
+<p>micro:bit už má niekoľko predprogramovaných melódií, tie nájdete v  - <a class="reference external" href="http://microbit-micropython.readthedocs.io/en/latest/tutorials/music.html">dokumentácii (pozri Music)</a></p>
+</div>
+<div class="section" id="pisanie-vlastnej-hudby">
+<span id="pisanie-vlastnej-hudby"></span><h2>7.2. Písanie vlastnej hudby<a class="headerlink" href="#pisanie-vlastnej-hudby" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">music</span>
+
+<span class="n">tune</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;C4:4&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;G:8&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;E:4&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;G:8&quot;</span><span class="p">]</span>
+<span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">tune</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><strong>C4:4</strong> - nota C zo štvrtej oktávy s dĺžkou 4</li>
+</ul>
+</div>
+<div class="section" id="rolnicky-na-micro-bite">
+<span id="rolnicky-na-micro-bite"></span><h2>7.3. Rolničky na micro:bite<a class="headerlink" href="#rolnicky-na-micro-bite" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p><img alt="Noty" src="../_images/noty-1.jpg" />
+<img alt="Noty" src="../_images/noty-2.gif" /></p>
+<p><img alt="Rolničky noty" src="../_images/jinglebells.gif" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piesen Rolnicky</span>
+<span class="kn">import</span> <span class="nn">music</span>
+
+<span class="n">tune</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;E:2&quot;</span><span class="p">,</span> <span class="s2">&quot;E:2&quot;</span><span class="p">,</span> <span class="s2">&quot;E:4&quot;</span><span class="p">,</span> <span class="s2">&quot;E:2&quot;</span><span class="p">,</span> <span class="s2">&quot;E:2&quot;</span><span class="p">,</span> <span class="s2">&quot;E:4&quot;</span><span class="p">,</span> <span class="s2">&quot;E:2&quot;</span><span class="p">,</span> <span class="s2">&quot;G:2&quot;</span><span class="p">,</span> <span class="s2">&quot;C:3&quot;</span><span class="p">,</span> <span class="s2">&quot;D:1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;E:8&quot;</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">music</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">tune</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Úloha:</strong> Doplň celú pieseň a zmeň jej tóninu</p>
+</div>
+<div class="section" id="zvukove-efekty">
+<span id="zvukove-efekty"></span><h2>7.4. Zvukové efekty<a class="headerlink" href="#zvukove-efekty" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">music</span>
+
+<span class="n">music</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Prvým argumentom je frekvencia a druhým dĺžka prehrávania frekvencie.</p>
+<p>Viac o tvorení zvukových efektov pomocou funkcie music.pitch() nájdeš v <a class="reference external" href="https://microbit-micropython.readthedocs.io/en/latest/music.html?highlight=pitch#music.pitch">dokumentácii</a></p>
+</div>
+<div class="section" id="tvorba-melodie">
+<span id="tvorba-melodie"></span><h2>7.5. Tvorba melódie<a class="headerlink" href="#tvorba-melodie" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">music</span>
+
+<span class="n">music</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">music</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="mi">600</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">music</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Úloha:</strong> Naprogramuj jednoduchý dvojtónový alarm ktorý sa po 5 sekundách vypne</p>
+</div>
+<div class="section" id="tvorba-melodie-cez-cykly">
+<span id="tvorba-melodie-cez-cykly"></span><h2>7.6. Tvorba melódie cez cykly<a class="headerlink" href="#tvorba-melodie-cez-cykly" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">music</span>
+
+<span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">400</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">800</span><span class="p">]:</span>
+    <span class="n">music</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">music</span>
+
+<span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">200</span><span class="p">):</span>
+    <span class="n">music</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="obratena-melodia">
+<span id="obratena-melodia"></span><h2>7.7. Obrátená melódia<a class="headerlink" href="#obratena-melodia" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">music</span>
+
+<span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">]:</span>
+    <span class="n">music</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">music</span>
+
+<span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="o">-</span><span class="mi">200</span><span class="p">):</span>
+    <span class="n">music</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="jemnejsia-melodia">
+<span id="jemnejsia-melodia"></span><h2>7.8. Jemnejšia melódia<a class="headerlink" href="#jemnejsia-melodia" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Teraz zmenšíme jednotlivé skoky vo frekvenciách a aj dĺžky prehrávania jednotlivých tónov</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">music</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">880</span><span class="p">,</span> <span class="mi">1760</span><span class="p">,</span> <span class="mi">16</span><span class="p">):</span>
+        <span class="n">music</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1760</span><span class="p">,</span> <span class="mi">880</span><span class="p">,</span> <span class="o">-</span><span class="mi">16</span><span class="p">):</span>
+        <span class="n">music</span><span class="o">.</span><span class="n">pitch</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Úloha:</strong> Naprogramuj policajnú sirénu <a class="reference external" href="https://www.youtube.com/watch?v=Kpxcx0E8MIU">(inšpiruj sa touto zvučkou)</a></p>
+</div>
+<div class="section" id="rozpravajuci-micro-bit">
+<span id="rozpravajuci-micro-bit"></span><h2>7.9. Rozprávajúci micro:bit<a class="headerlink" href="#rozpravajuci-micro-bit" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p><img alt="Speech setup" src="https://microbit-micropython.readthedocs.io/en/latest/_images/speech1.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">speech</span>
+
+<span class="n">speech</span><span class="o">.</span><span class="n">say</span><span class="p">(</span><span class="s2">&quot;Hello students! I am a microbit&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+  </body>
+</html>

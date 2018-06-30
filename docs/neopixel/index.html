@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>8. NeoPixel &#8212; Dokumentácia Programujeme micro:bit v MicroPythone </title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/embed/embed.js"></script>
+    <script type="text/javascript" src="../_static/embed/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Hľadať" href="../search/" />
+    <link rel="next" title="9. Digitálny vstup" href="../digitalny-vstup/" />
+    <link rel="prev" title="7. Zvuk" href="../zvuk/" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../">
+          Programujeme micro:bit v MicroPythone</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../">Vyber kapitolu <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../uvod/">1. Úvod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bloky/">2. Blokové programovanie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../micropython/">3. MicroPython prostredia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../displej/">4. Displej</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tlacidla/">5. Tlačidlá</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../naklonenie/">6. Naklonenie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../zvuk/">7. Zvuk</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. NeoPixel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../digitalny-vstup/">9. Digitálny vstup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bananove-piano/">10. Banánové piano</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hra_reflexy/">11. Hra na reflexy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wireless/">12. Bezdrôtová komunikácia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../alarm/">13. Domáci alarm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../move_mini_robot/">14. MOVE: mini robot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projekty/">15. Zbierka Projektov</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../inspiracia/">16. Inšpirácie a odkazy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../kupit/">17. Kde kúpiť micro:bit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../riesenia/">18. Riešenia a odpovede</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="../zvuk/" title="Previous Chapter: 7. Zvuk"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; 7. Zvuk</span>
+    </a>
+  </li>
+  <li>
+    <a href="../digitalny-vstup/" title="Next Chapter: 9. Digitálny vstup"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">9. Digitálny ... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search/" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+
+    <p class="topless">
+        <h4>      
+                <a href="../zvuk/" title="predošlá kapitola">&nbsp;&nbsp;&nbsp;&#8676; Dozadu</a>
+                |
+                 <a href="../digitalny-vstup/" title="ďalšia kapitola">Dopredu&nbsp;&nbsp;&nbsp;&#8677;</a>
+    
+        </h4>
+    </p>
+    
+    <h4>Obsah Kapitoly:</h4>
+    
+    <ul>
+<li><a class="reference internal" href="#">8. NeoPixel</a><ul>
+<li><a class="reference internal" href="#zasvietenie-jednej-ledky">8.1. Zasvietenie jednej LEDky</a></li>
+<li><a class="reference internal" href="#zasvietenie-vsetkych-lediek">8.2. Zasvietenie všetkých LEDiek</a></li>
+<li><a class="reference internal" href="#zasvietenie-vsetkych-lediek-cyklom">8.3. Zasvietenie všetkých LEDiek cyklom</a></li>
+<li><a class="reference internal" href="#jednosmerny-knight-rider">8.4. Jednosmerný Knight Rider</a></li>
+<li><a class="reference internal" href="#fadein-and-fadeout">8.5. FadeIn and FadeOut</a></li>
+<li><a class="reference internal" href="#nahodne-generovanie-farieb">8.6. Náhodné generovanie farieb</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+<p class="topless">
+  <h5>
+    <a href="https://docs.microbit.sk" target="_blank">MicroPython Dokumentácia</a>
+  </h5>
+  <h5>
+    <a href="https://pycon.sk" target="_blank">Python Konferencia PyCon</a>
+  </h5>
+  <h5>
+    <a href="https://spy.python.sk" target="_blank">SPy o.z.</a>
+  </h5>
+  <h5>
+    <a href="https://marekmansell.sk" target="_blank">O autorovi</a>
+  </h5>
+</p>
+        </div>
+      </div>
+    <div class="col-md-9 content">
+      
+  <div class="section" id="neopixel">
+<span id="neopixel"></span><h1>8. NeoPixel<a class="headerlink" href="#neopixel" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<div class="section" id="zasvietenie-jednej-ledky">
+<span id="zasvietenie-jednej-ledky"></span><h2>8.1. Zasvietenie jednej LEDky<a class="headerlink" href="#zasvietenie-jednej-ledky" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">neopixel</span>
+
+<span class="n">np</span> <span class="o">=</span> <span class="n">neopixel</span><span class="o">.</span><span class="n">NeoPixel</span><span class="p">(</span><span class="n">pin1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">np</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="zasvietenie-vsetkych-lediek">
+<span id="zasvietenie-vsetkych-lediek"></span><h2>8.2. Zasvietenie všetkých LEDiek<a class="headerlink" href="#zasvietenie-vsetkych-lediek" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">neopixel</span>
+
+<span class="n">np</span> <span class="o">=</span> <span class="n">neopixel</span><span class="o">.</span><span class="n">NeoPixel</span><span class="p">(</span><span class="n">pin1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">np</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="zasvietenie-vsetkych-lediek-cyklom">
+<span id="zasvietenie-vsetkych-lediek-cyklom"></span><h2>8.3. Zasvietenie všetkých LEDiek cyklom<a class="headerlink" href="#zasvietenie-vsetkych-lediek-cyklom" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">neopixel</span>
+
+<span class="n">np</span> <span class="o">=</span> <span class="n">neopixel</span><span class="o">.</span><span class="n">NeoPixel</span><span class="p">(</span><span class="n">pin1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]:</span>
+    <span class="n">np</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">neopixel</span>
+
+<span class="n">np</span> <span class="o">=</span> <span class="n">neopixel</span><span class="o">.</span><span class="n">NeoPixel</span><span class="p">(</span><span class="n">pin1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">np</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="jednosmerny-knight-rider">
+<span id="jednosmerny-knight-rider"></span><h2>8.4. Jednosmerný Knight Rider<a class="headerlink" href="#jednosmerny-knight-rider" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">neopixel</span>
+
+<span class="n">np</span> <span class="o">=</span> <span class="n">neopixel</span><span class="o">.</span><span class="n">NeoPixel</span><span class="p">(</span><span class="n">pin1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="p">)):</span>
+        <span class="k">for</span> <span class="n">led_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">led_id</span><span class="p">:</span>
+                <span class="n">np</span><span class="p">[</span><span class="n">led_id</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">np</span><span class="p">[</span><span class="n">led_id</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Úloha:</strong> Naprogramuj NeoPixel tak, aby sa LEDka odrazila naspäť</p>
+</div>
+<div class="section" id="fadein-and-fadeout">
+<span id="fadein-and-fadeout"></span><h2>8.5. FadeIn and FadeOut<a class="headerlink" href="#fadein-and-fadeout" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">neopixel</span>
+
+<span class="n">np</span> <span class="o">=</span> <span class="n">neopixel</span><span class="o">.</span><span class="n">NeoPixel</span><span class="p">(</span><span class="n">pin1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+
+    <span class="c1"># fade in</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">led_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="p">)):</span>
+            <span class="n">np</span><span class="p">[</span><span class="n">led_id</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="c1"># fade out</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">led_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="p">)):</span>
+            <span class="n">np</span><span class="p">[</span><span class="n">led_id</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+    <span class="c1"># clear</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="p">)):</span>
+        <span class="n">np</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nahodne-generovanie-farieb">
+<span id="nahodne-generovanie-farieb"></span><h2>8.6. Náhodné generovanie farieb<a class="headerlink" href="#nahodne-generovanie-farieb" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">neopixel</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">seed</span>
+
+<span class="n">seed</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">np</span> <span class="o">=</span> <span class="n">neopixel</span><span class="o">.</span><span class="n">NeoPixel</span><span class="p">(</span><span class="n">pin1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="p">)):</span>
+        <span class="n">red</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="n">green</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="n">blue</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+
+        <span class="n">np</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">red</span><span class="p">,</span> <span class="n">green</span><span class="p">,</span> <span class="n">blue</span><span class="p">)</span>
+
+        <span class="n">np</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        <span class="n">sleep</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Úloha:</strong> Pozmeň program tak, aby každú sekundu zmenil farby všetkých LED diód naraz</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+  </body>
+</html>
