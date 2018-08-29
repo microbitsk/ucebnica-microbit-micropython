@@ -10,7 +10,7 @@ Tento manuál sa snaží učiť základy hardvéru a programovania pomocou dosky
 Učíme s Hardvérom - microbit:Slovensko
 ======================================
 
-Projekt Učíme s Hardvérom je iniciatívou občianskeho združenia `SPy <https://spy.python.sk/>`_, ktorého cieľom je priniesť zaujímavejšie hodiny informatiky do škôl. Viac info `nájdete na tomto odkaze <http://micropython.sk/microbit/ucime-s-hardverom.pdf>`_.
+Projekt Učíme s Hardvérom je iniciatívou občianskeho združenia `SPy <https://spy.python.sk/>`_, ktorého cieľom je priniesť zaujímavejšie hodiny informatiky do škôl. Viac info `nájdete na tomto odkaze <https://www.ucimeshardverom.sk/>`_.
 
 SPy o.z. a PyConSK
 ==================

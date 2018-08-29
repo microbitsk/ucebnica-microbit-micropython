@@ -5,12 +5,12 @@ Programujeme micro:bit v MicroPythone
 Ahoj micro:bit!
 ***************
 
-Táto učebnica sa snaží učiť základy hardvéru a programovania pomocou dosky micro:bit a jazyka MicroPython. Vznikla ako podklad pre workshopy, ktoré pre učiteľov informatiky na základných a stredných školách organizuje občianske združenie `SPy <https://spy.python.sk/>`_ avšak postupne sa ju snažíme premeniť na plnohodnotnú učebnicu vhodnú pre učiteľov, rodičov i samoukov.
+Tento manuál sa snaží učiť základy hardvéru a programovania pomocou dosky micro:bit a jazyka MicroPython. Vznikla ako podklad pre workshopy, ktoré pre učiteľov informatiky na základných a stredných školách organizuje občianske združenie `SPy <https://spy.python.sk/>`_ avšak postupne sa ju snažíme premeniť na plnohodnotný manuál vhodný pre učiteľov, rodičov i samoukov.
 
 Učíme s Hardvérom - microbit:Slovensko
 ======================================
 
-Projekt Učíme s Hardvérom je iniciatívou občianskeho združenia `SPy <https://spy.python.sk/>`_, ktorého cieľom je priniesť zaujímavejšie hodiny informatiky do škôl. Viac info `nájdete na tomto odkaze <http://micropython.sk/microbit/ucime-s-hardverom.pdf>`_.
+Projekt Učíme s Hardvérom je iniciatívou občianskeho združenia `SPy <https://spy.python.sk/>`_, ktorého cieľom je priniesť zaujímavejšie hodiny informatiky do škôl. Viac info `nájdete na tomto odkaze <https://www.ucimeshardverom.sk/>`_.
 
 SPy o.z. a PyConSK
 ==================
@@ -19,12 +19,12 @@ Projekt je zastrešený občianskym združením `SPy <https://spy.python.sk/>`_,
 
 .. admonition:: Úloha
 
-   V takýchto štvorčekoch budú popísané úlohy. Správne riešenia nájdeš na konci učebnice.
+   V takýchto štvorčekoch budú popísané úlohy. Správne riešenia nájdeš na konci manuálu.
 
 .. admonition:: Otázky
 
-   * V učebnici nájdeš aj kontrolné otázky.
-   * Odpovede sú tiež na konci učebnice.
+   * V manuáli nájdeš aj kontrolné otázky.
+   * Odpovede sú na konci manuálu.
 
 
 ***************
