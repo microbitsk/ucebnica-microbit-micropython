@@ -15,16 +15,15 @@ Projekt Učíme s Hardvérom je iniciatívou občianskeho združenia `SPy <https
 SPy o.z. a PyConSK
 ==================
 
-Projekt je zastrešený občianskym združením `SPy <https://spy.python.sk/>`_, ktoré organizuje každoročnú medzinárodnú konferenciu `PyCon Slovakia <https://pycon.sk/>`_ a pravidelné mesačné meetupy v Bratislave. Súčasťou  konferencie je aj sekcia pre učiteľov, EduTrack, so zameraním na vyučovanie programovania v jazyku Python, oboznámenie učiteľov s novými trendmi a možnosťami v oblasti programovania.
+Občianske združenie `SPy <https://spy.python.sk/>`_ organizuje každoročnú medzinárodnú konferenciu `PyCon Slovakia <https://pycon.sk/>`_ a pravidelné mesačné meetupy v Bratislave. Súčasťou  konferencie je aj sekcia pre učiteľov, EduSummit, so zameraním na vyučovanie programovania v jazyku Python, oboznámenie učiteľov s novými trendmi a možnosťami v oblasti programovania.
 
 .. admonition:: Úloha
 
-   V takýchto štvorčekoch budú popísané úlohy. Správne riešenia nájdeš na konci manuálu.
+   V takýchto štvorčekoch budú popísané úlohy.
 
 .. admonition:: Otázky
 
    * V manuáli nájdeš aj kontrolné otázky.
-   * Odpovede sú na konci manuálu.
 
 
 ***************
@@ -37,7 +36,6 @@ Kapitoly
    :includehidden:
 
    uvod
-   bloky
    micropython
    displej
    tlacidla
